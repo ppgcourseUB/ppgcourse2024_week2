@@ -259,7 +259,7 @@ $ANGSD/angsd -doMajorMinor
 
 A possible command line to estimate allele frequencies might be (replace the angsd command in your batch fiile accordingly):
 ```
-angsd -b $DATA/samples.bam_list -ref $REF -r 11:21000000-22000000 -out 1000G_GL_MAF -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -C 50 -baq 1 -minMapQ 20 -minQ 20 -minInd 5 -doCounts 1  -setMinDepth 30 -setMaxDepth 150 -GL 2 -doMajorMinor 1 -doMaf 1
+angsd -b samples.bam_list -ref $REF -r 11:21000000-22000000 -out 1000G_GL_MAF -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -C 50 -baq 1 -minMapQ 20 -minQ 20 -minInd 5 -doCounts 1  -setMinDepth 30 -setMaxDepth 150 -GL 2 -doMajorMinor 1 -doMaf 1
 ```
 Parameter | Meaning
 --- | ---

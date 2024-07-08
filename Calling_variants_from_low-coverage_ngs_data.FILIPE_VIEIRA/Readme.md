@@ -17,18 +17,18 @@ According to its website *ANGSD is a software for analyzing next generation sequ
 
 ## Data description and access
 
-For the exercises we are going to use mapped data (BAM files) of the human chromosome 11 from the 1000 Genomes Consortium.
+For the exercises, we are going to use mapped data (BAM files) of the human chromosome 11 from the 1000 Genomes Consortium.
 
-To get the BAM files, you need to run the `get_data.sh' script, which you can find in the data folder. 
+To get the BAM files, you need to run the `get_data.sh` script.
 
-1. First, as ppguser (within the container), download the repository for this hands-on session with `ghget':
+1. First, as ppguser (within the container), download the repository for this hands-on session with `ghget`:
 
 ```bash
 ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Calling_variants_from_low-coverage_ngs_data.FILIPE_VIEIRA`
 ```
 > Remember, if this command doesn't work (especially for Mac users), you can download the repository to a temporary folder and then move it to the ppguser user (instructions have been emailed to you).
 
-2. Then, enter de folded and execute the bash script:
+2. Then, enter de folder and execute the bash script:
 
 ```bash
 cd Calling_variants_from_low-coverage_ngs_data.FILIPE_VIEIRA

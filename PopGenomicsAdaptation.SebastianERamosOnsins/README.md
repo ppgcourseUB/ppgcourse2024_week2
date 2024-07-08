@@ -22,8 +22,12 @@ The objectives of this first part of the practical session are:
 First of all, localize the scripts and the manual for this practical session. You can obtain it in the github of the course. that is:
 
 ```
-svn export https://github.com/ppgcourse2024_week2
-/PopGenomicsAdaptation.SebastianERamosOnsins
+git clone https://github.com/ppgcourseUB/ppgcourse2024_week2.git
+```
+and from here, go to the folder PopGenomicsAdaptation:
+
+```
+cd PopGenomicsAdaptation.SebastianERamosOnsins
 ```
 
 It would be desirable to share this folder with your docker virtual machine to perform the practical session. 

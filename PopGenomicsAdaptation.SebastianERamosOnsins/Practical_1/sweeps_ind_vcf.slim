@@ -1,0 +1,159 @@
+// Keywords: Selective sweep at a random position, Complete / incomplete sweep / standing.  Run for 5*Ne generations. Selective seep around 50000.
+//  To run using command line:
+//  Neutral:
+//    slim -t -m -d "freq_sel_init=0.00125" -d "freq_sel_end=1.0" -d "s_beneficial=0" -d "ind_sample_size=50" -d "file_output1='./slim.snm.output_file.ms'" ./sweeps_ind.slim
+// Complete;
+//   slim -t -m -d "freq_sel_init=0.00125" -d "freq_sel_end=1.0" -d "s_beneficial=0.05" -d "ind_sample_size=50" -d "file_output1='./slim.selsweep.output_file.ms'" ./sweeps_ind.slim
+// Incomplete;
+//    slim -t -m -d "freq_sel_init=0.00125" -d "freq_sel_end=0.5" -d "s_beneficial=0.05" -d "ind_sample_size=50" -d "file_output1='./slim.incomplete_selsweep.output_file.ms'" ./sweeps_ind.slim
+// Standing;
+//    slim -t -m -d "freq_sel_init=0.25" -d "freq_sel_end=1.0" -d "s_beneficial=0.05" -d "ind_sample_size=50" -d "file_output1='./slim.standing_selsweep.output_file.ms'" ./sweeps_ind.slim
+
+initialize() {
+	initializeMutationRate(2e-7);
+	initializeMutationType("m1", 0.5, "f", 0.0);
+	initializeGenomicElementType("g1", m1, 1.0);
+	initializeGenomicElement(g1, 0, 99999);
+	initializeRecombinationRate(1e-7);
+	
+	defineConstant("Ne",4000); //8K chromosomes 
+	
+	if (exists("slimgui")) {
+		defineConstant("freq_sel_init",0.00125);
+		defineConstant("freq_sel_end",1.0);
+		defineConstant("s_beneficial",0.05);
+		defineConstant("ind_sample_size",50);
+		defineConstant("file_output1","./slim.test_selsweep.output_file.ms");
+	}
+	writeFile(filePath=file_output1+"_curve.txt",contents=(""),append=F);
+}
+//do initialization of the population during 20000 generations (5*Ne) to have a population in approximate equlibrium mutation-drift
+1 early() { 
+	// save this run's identifier, used to save and restore once a positive selected position is lost
+	defineConstant("simID", getSeed());
+	sim.addSubpop("p1", Ne); 
+}
+//introduce selection at a given posotopn using some conditions (frequency)
+20000 late() {
+	if(s_beneficial != 0) {	
+		// save the state of the simulation
+		sim.outputFull("./tmp_slim_" + simID + ".txt");	
+		//look for mutation that is closest to the center of the region and to the desired initial frequency
+		muts= sim.mutations;
+		distm=(sim.mutationFrequencies(p1, muts)-freq_sel_init)^2;	
+		distm=distm/sd(distm); //normalize
+		distp=(muts.position-50000)^2;	
+		distp=distp/sd(distp); //normalize
+		dist=sqrt(distm+distp);
+		if (size(dist))  //here a distance theshold can be instead filtered if is replaced by 'min(dist)< given value thr'
+		{
+			//choose the mutation		
+			mutchosen=which(dist==min(dist));
+			mut=muts[mutchosen];	
+			mut.setSelectionCoeff(s_beneficial); //add beneficial slection
+			pos_mut = mut.id; //look at the variant in the total variants
+			print("position: " + mut.position + " frequency: " +  sim.mutationFrequencies(p1, mut));
+			writeFile(filePath=file_output1+"_curve.txt",contents=("position: "+ mut.position),append=T);
+		}
+		else
+		{
+			cat("No contender of sufficient frequency found.\n");
+			writeFile(filePath=file_output1+"_curve.txt",contents=("No contender of sufficient frequency found.\n"),append=T);
+			print("Simulation finished");
+			//finish simulation
+			system("rm ./tmp_slim_" + simID + ".txt");
+			sim.simulationFinished();
+		}
+	}
+	else {
+			cat("ACHIEVED\n");
+			writeFile(filePath=file_output1+"_curve.txt",contents=("ACHIEVED"),append=T);
+			//print the sampled genomes
+			g = p1.sampleIndividuals(ind_sample_size).genomes;
+			g.outputVCF(filePath=file_output1+".VCF");
+			//sim.outputFull();
+			print("Simulation finished");
+			//finish simulation
+			system("rm ./tmp_slim_" + simID + ".txt");
+			sim.simulationFinished();
+	}
+}
+//finish simulation if selective position achieve final frequency, otherwise repeat process from equilibrium saved population
+20001:25000 late() {	
+	if (sum(sim.mutations.selectionCoeff) == 0)
+	{
+		if (sum(sim.substitutions.selectionCoeff) == 0.0) {
+			cat("Sweep mutation lost in gen. " + sim.cycle + "\n");
+			//writeFile(filePath=file_output1+"_curve.txt",contents=("Sweep mutation lost in gen. " + sim.cycle),append=T);
+			writeFile(filePath=file_output1+"_curve.txt",contents=("frequency: " + "0.000"),append=T);
+			// go back to initial saved generation 10000
+			sim.readFromPopulationFile("./tmp_slim_" + simID + ".txt");			
+			// start a newly seeded run
+			setSeed(rdunif(1, 0, asInteger(2^62) - 1));
+			//look for mutation that is closest to the center of the region and to the desired initial frequency
+			//already calculated before but variables lost, may be used a gobal variable?
+			muts= sim.mutations;
+			distm=(sim.mutationFrequencies(p1, muts)-freq_sel_init)^2;	
+			distp=distm/sd(distm); //normalize
+			distp=(muts.position-50000)^2;	
+			distp=distp/sd(distp); //normalize
+			dist=sqrt(distm+distp);
+			if (size(dist))  //here a distance theshold can be instead filtered if is replaced by 'min(dist)< given value thr'
+			{
+				//choose the mutation		
+				mutchosen=which(dist==min(dist));
+				mut=muts[mutchosen];	
+				mut.setSelectionCoeff(s_beneficial); //add beneficial slection
+				pos_mut = mut.id; //look at the variant in the total variants
+				print("frequency: " + sim.mutationFrequencies(p1, mut));
+				writeFile(filePath=file_output1+"_curve.txt",contents=("frequency: " + sim.mutationFrequencies(p1, mut)),append=T);
+			}
+			else
+			{
+				cat("No contender of sufficient frequency found.\n");
+				writeFile(filePath=file_output1+"_curve.txt",contents=("No contender of sufficient frequency found."),append=T);
+				//sim.outputFull();
+				print("Simulation finished");
+				//finish simulation
+				system("rm ./tmp_slim_" + simID + ".txt");
+				sim.simulationFinished();
+			}
+		}
+		else {
+			cat("Sweep mutation reached fixation.\n");
+			//writeFile(filePath=file_output1+"_curve.txt",contents=("Sweep mutation reached fixation."),append=T);
+			writeFile(filePath=file_output1+"_curve.txt",contents=("frequency: " + "1.000"),append=T);
+			//print the sampled genomes
+			g = p1.sampleIndividuals(ind_sample_size).genomes;
+			g.outputVCF(filePath=file_output1+".VCF");
+			//sim.outputFull();
+			print("Simulation finished");
+			//finish simulation
+			system("rm ./tmp_slim_" + simID + ".txt");
+			sim.simulationFinished();
+		}
+	}
+	//monitorize the beneficial mutation
+	muts = sim.mutations;
+	pos_mut = which(sim.mutations.selectionCoeff > 0);
+	if(size(pos_mut)) {
+		print(sim.mutationFrequencies(p1,muts[pos_mut])); 
+		writeFile(filePath=file_output1+"_curve.txt",contents=("frequency: " + sim.mutationFrequencies(p1,muts[pos_mut])),append=T);
+		if (sim.mutationFrequencies(p1,muts[pos_mut]) >= freq_sel_end) {	
+			print("freq_end = " + sim.mutationFrequencies(p1,muts[pos_mut]));
+			writeFile(filePath=file_output1+"_curve.txt",contents=("frequency: " + sim.mutationFrequencies(p1,muts[pos_mut])) ,append=T);
+			cat("ACHIEVED\n");
+			//writeFile(filePath=file_output1+"_curve.txt",contents=("ACHIEVED: 0"),append=T);
+			//print the sampled genomes
+			g = p1.sampleIndividuals(ind_sample_size).genomes;
+			g.outputVCF(filePath=file_output1+".VCF");
+			//sim.outputFull();
+			print("Simulation finished");
+			//finish simulation
+			system("rm ./tmp_slim_" + simID + ".txt");
+			sim.simulationFinished();
+		}	
+	}
+}
+
+

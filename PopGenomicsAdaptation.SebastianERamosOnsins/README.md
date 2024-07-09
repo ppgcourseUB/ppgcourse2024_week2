@@ -130,7 +130,7 @@ Once the positive mutation achieves the final frequency, a sample from the popul
 
 ## Run Three different Selective Sweeps Scenarios
 
-Here, we will simulate different selective scenarios in order to see the effect of positive selection on the genome variability. Three different selective sweep scenarios plus a neutral scenarios are defined in the script "**0.run\_slim\_selecting\_sweep.sh**":
+Here, we will simulate different selective scenarios in order to see the effect of positive selection on the genome variability. Three different selective sweep scenarios plus a neutral scenarios are defined in the script **"0.run\_slim\_selecting\_sweep.sh" (in the folder ./Practical_1**):
 
 ```
 # Neutral:
@@ -184,7 +184,7 @@ The *slim* script for doing the simulations is called "**slim\_template.slim**".
 
 ## Run Simulations under Different Selective Scenarios
 
-Here, we will simulate three different selective scenarios (plus one neutral) in order to evaluate the ability to detect the proportion of beneficial substitutions under the defined conditions.The scenarios are constructed from the script "**0.run\_construct\_slim\_conditions.sh**". 
+Here, we will simulate three different selective scenarios (plus one neutral) in order to evaluate the ability to detect the proportion of beneficial substitutions under the defined conditions.The scenarios are constructed from the script "**0.run\_construct\_slim\_conditions.sh" (in the folder ./Practical_2**). 
 
 ```
 #### RUN DIFFERENT CONDITIONS. OBTAIN SFS IN SYN AND NONSYN. CALCULATE MKTasymptotic. ####

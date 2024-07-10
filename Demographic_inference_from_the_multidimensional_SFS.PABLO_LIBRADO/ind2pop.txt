@@ -1,0 +1,5 @@
+ela01	Africa
+UstIshim	HGAncientEurasia
+sf12	HGSweeden
+Funadomari_23	HGJapan
+AltaiNeandertal	Neandertal

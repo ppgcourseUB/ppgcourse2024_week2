@@ -10,7 +10,7 @@ This session will showcase how to run momi2 based on a publicly-available datase
 | Funadomari_23 | 3,755 | 39.44 | Asia (Japan)
 | AltaiNeandertal | ~120,000  | 50 | Asia
 
-Download the folder for this practice in your running container.
+Download the folder for this practice in your container.
 
 ```bash
 ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Demographic_inference_from_the_multidimensional_SFS.PABLO_LIBRADO

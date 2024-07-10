@@ -276,7 +276,7 @@ The Africa sample really is more heterozygous.
 
 The original VCF file contains nucleotide transitions (TS) and nucleotide transversions (TV) . This may be problematic as postmortem DNA damage, typical of ancient DNA molecules, is often manifested as an excess of nucleotide transitions (spontaneous Cytosine deamination leads to C>T errors). It is unlikely but still possible that African genomes retain some excess of DNA damage, as imputation works worse for ancestries under-represented in the reference panel. 
 
-First, you need to install bcftools (it is not available in the current version of the course image):
+First, you need to install `bcftools` (it is not available in the current version of the course image):
 
 `conda install bcftools`
 

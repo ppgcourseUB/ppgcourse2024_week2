@@ -276,7 +276,11 @@ The Africa sample really is more heterozygous.
 
 The original VCF file contains nucleotide transitions (TS) and nucleotide transversions (TV) . This may be problematic as postmortem DNA damage, typical of ancient DNA molecules, is often manifested as an excess of nucleotide transitions (spontaneous Cytosine deamination leads to C>T errors). It is unlikely but still possible that African genomes retain some excess of DNA damage, as imputation works worse for ancestries under-represented in the reference panel. 
 
-Try to remove nucleotide transitions (remember to index the resulting file), to see if it fixes the potential problem. For example:
+First, you need to install bcftools (it is not available in the current version of the course image):
+
+`conda install bcftools`
+
+Then, try to remove nucleotide transitions (remember to index the resulting file), to see if it fixes the potential problem. For example:
     
     gunzip -c 1.neo_impute_ph.filteredAA.bi.vcf.gz | awk -F '\t' '( !(($4 == "A" && $5 == "G") || ($4 == "G" && $5 == "A") || ($4 == "C" && $5 == "T") || ($4 == "T" && $5 == "C")) || $0 ~ /^#/ )' | bcftools/bcftools view -m 2 -o 1.neo_impute_ph.filteredAA.bi.TV.vcf.gz -O z -
 

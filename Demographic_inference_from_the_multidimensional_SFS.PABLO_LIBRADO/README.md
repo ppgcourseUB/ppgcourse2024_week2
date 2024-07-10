@@ -1,4 +1,5 @@
-# Momi2: Hands on session
+# Demographic inference from the multidimensional SFS: Momi2
+
 This session will showcase how to run momi2 based on a publicly-available dataset (Allentoft et al. 2024; https://erda.ku.dk/archives/917f1ac64148c3800ab7baa29402d088/published-archive.html), which includes thousands of ancient human genomes. For computational reasons, the dataset has been filtered to include SNPs from chromosome 1 only, and 5 ancient samples of **decent** quality:
  
 | Sample | Date (ya) | Depth (X) | Continent |

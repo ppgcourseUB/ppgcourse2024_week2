@@ -4,7 +4,7 @@ Instructor: Oscar Lao
 
 ## Installing required packages:
 
-One you are running the container, install the R packages `HDInterval` and `moments`by typing:
+Once you are running the container, install the R packages `HDInterval` and `moments` before starting the hands on session:
 
 `conda install r-hdinterval r-moments`
 

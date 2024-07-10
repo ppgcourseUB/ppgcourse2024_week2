@@ -13,7 +13,7 @@ This session will showcase how to run momi2 based on a publicly-available datase
 Download the folder for this practice in your running container.
 
 ```bash
-ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/blob/main/Demographic_inference_from_the_multidimensional_SFS.PABLO_LIBRADO
+ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Demographic_inference_from_the_multidimensional_SFS.PABLO_LIBRADO
 ```
 
 The input VCF file should contain 644,366 SNPs:

@@ -10,13 +10,16 @@ This session will showcase how to run momi2 based on a publicly-available datase
 | Funadomari_23 | 3,755 | 39.44 | Asia (Japan)
 | AltaiNeandertal | ~120,000  | 50 | Asia
 
-Download the VCF file (*1.neo_impute_ph.filteredAA.bi.vcf.gz*), and its corresponding index file (*1.neo_impute_ph.filteredAA.bi.vcf.gz.csi*). Then start a docker session sharing a local folder in your computer to be able to access this file from the docker container. The VCF file should contain 644,366 SNPs.
+Download the folder for this practice in your running container.
+
+```bash
+ghget
+```
+
+The input VCF file should contain 644,366 SNPs:
 
 `gunzip -c 1.neo_impute_ph.filteredAA.bi.vcf.gz | grep -cv '#'` 
 
- In my case, I downloaded *1.neo_impute_ph.filteredAA.bi.vcf.gz* into /Users/pablo/ppgdata. Therefore, I need to launch docker using:
-
-`docker run -it --name=latest2 -v /Users/pablo/ppgdata:/ppgdata bb788036b710 /bin/bash`
 
 ## Transform this VCF into a mSFS
 Momi2 includes two scripts to calculate the multidimensional Site Frequency Spectrum (mSFS) from the VCF, resulting in the required input format:  

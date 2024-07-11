@@ -183,5 +183,5 @@ To run the program:
 #!/bin/bash                                                                                                            
 /home/ppguser/software/bpp/src/bpp --cfile ./sp-data/BPP/inputs/bears_A10.bpp.ctl
 ```
-
+You will find the files with the results in the same working directory.
 

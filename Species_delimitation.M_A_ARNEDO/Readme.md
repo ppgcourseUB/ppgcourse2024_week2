@@ -161,7 +161,7 @@ Average standard deviation of support values among runs: 0.001385
 
 ## 2. Multi-locus species delimitation: `BPP` program
 
-`BPP` requires 3 files to run:
+`BPP` requires 3 files to run (you can find these files in the directory "./sp_data/BPP/inputs":
 
 * **The sequence file**:    
 It uses a sequential phylip format with one gene (locus) after the other. Locus may differ in the number of sequences. Labelling is important. Each sequence name must be followed by ^ and an ID corresponding to the individual the sequence comes from.

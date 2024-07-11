@@ -16,7 +16,7 @@ Download the folder for this practice in your container.
 ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Demographic_inference_from_the_multidimensional_SFS.PABLO_LIBRADO
 ```
 
-The input VCF file should contain 644,366 SNPs:
+The input VCF file should contain 572,330 SNPs:
 
 `gunzip -c 1.neo_impute_ph.filteredAA.bi.vcf.gz | grep -cv '#'` 
 

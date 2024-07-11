@@ -1,0 +1,501 @@
+Running BayPass Version 2.41 with the following command line:
+../software/baypass_public/sources/g_baypass -npop 52 -gfile ./input/hgdp.geno -seed 15263 -outprefix ./results_core/hgdp_core_s1
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Size of the data set 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ No of Markers                      =      2335
+ No of Populations                  =        52
+ Genotype File name                 =    ./input/hgdp.geno
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        Model Specifications
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+ -> Basic Mode (no covariate):
+  (*) Omega matrix is estimated with prior inv(Omega) ~ Wish_npop((1/rho)Id_npop,rho)  where rho=     1
+  (*) Parameters from the Pi prior dist. will be estimated
+  (*) Outlier detection: XtX stat. for each SNP        
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+           MCMC specifications
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+ Nb. of sampled parameter values       =    1000
+ Thinning Rate                         =      20
+ Burn in Period Length                 =    5000
+ Max Number of Pilot runs              =      20
+ Pilot run Length                      =     500
+
+ Init. deltas for Pi proposals          = 0.5000
+ Coop Pij proposal with init. sig. for Pi. multivariate prop.          =  0.0500
+ Pilot Run Adj. Factor Pilot            =  1.25
+ Targeted Rej./Acc. rates              =  0.25-0.40
+ R.N.G. seed                            =   15263
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        COUNT DATA
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+First SNP ref. Allele count     0    0    0    0    0    0    0    1    1    0    4    0    1    0    1    4    3    0    3    1    1    0    2    0    0    1    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+First SNP total Gene count     22   16   44   42   24   12   44   30   48   24   56   26   48   54   12   90   82   56   88   48   48   46   44   46   50   48   48   16   20   20   88   18   58   16   20   20   16   18   20   20   20   20   18   50   20   14   28   42   24   16   22   32
+Last  SNP ref. Allele count    16   14   23   34   15    6   25   12   28    9    8   10   19   22    5   34   33   22   35   41   18   40   17   18   22   60   45    7   14    8   27    8   23   11   18   11   13   10   16   16   17    4    8   24   15   11    9   28   19   13    7   19
+Last  SNP total Gene count     22   16   44   42   24   12   44   30   48   24   56   26   48   54   12   90   82   56   88   48   48   46   44   46   50   48   48   16   20   20   88   18   58   16   20   20   16   18   20   20   20   20   18   50   20   14   28   42   24   16   22   32
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        PILOT RUNS
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Initial Values:
+Pij min         =      0.01087  Pij max         =      1.22000  Average Pij     =      0.38755
+Pij_til min     =     -2.19523  Pij_til max     =      2.11438  Average Pij_til =      0.00000
+PI min          =      0.03495  PI max          =      0.96505  Average PI      =      0.38755
+Pi_beta_params values       1.22954      1.94303
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    1
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.53031  Pij max         =      1.41794  Average Pij     =      0.37897
+Pij_til min     =     -2.90694  Pij_til max     =      2.44437  Average Pij_til =     -0.01744
+PI min          =      0.01368  PI max          =      0.98228  Average PI      =      0.38410
+Pi_beta_params values       1.24757      1.98318
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for      1073   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for      2335   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.25629   mean delta_p=  0.04592
+      Mean Acceptance Rate Pi   =  0.08211   mean delta_pi=  0.40000
+      Mean Acceptance Rate b_mu =  0.33000        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.03600        delta  =  0.80000
+
+iii) Running Time            :  0 d  0 h  0 min  8 sec
+     Estimated Remaining Time:  0 d  0 h  9 min 34 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    2
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.50020  Pij max         =      1.54366  Average Pij     =      0.37999
+Pij_til min     =     -2.71234  Pij_til max     =      2.68832  Average Pij_til =     -0.01173
+PI min          =      0.00592  PI max          =      0.98593  Average PI      =      0.38299
+Pi_beta_params values       1.25547      1.95112
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       609   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for      2335   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.29355   mean delta_p=  0.04410
+      Mean Acceptance Rate Pi   =  0.09044   mean delta_pi=  0.32000
+      Mean Acceptance Rate b_mu =  0.36800        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.05000        delta  =  0.64000
+
+iii) Running Time            :  0 d  0 h  0 min 16 sec
+     Estimated Remaining Time:  0 d  0 h  9 min 20 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    3
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.54786  Pij max         =      1.42377  Average Pij     =      0.37761
+Pij_til min     =     -2.34645  Pij_til max     =      2.76274  Average Pij_til =     -0.01821
+PI min          =      0.00584  PI max          =      0.98795  Average PI      =      0.38285
+Pi_beta_params values       1.21848      1.93042
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       455   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for      2325   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.29925   mean delta_p=  0.04285
+      Mean Acceptance Rate Pi   =  0.16626   mean delta_pi=  0.25627
+      Mean Acceptance Rate b_mu =  0.33600        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.03800        delta  =  0.51200
+
+iii) Running Time            :  0 d  0 h  0 min 24 sec
+     Estimated Remaining Time:  0 d  0 h  9 min  9 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    4
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.57970  Pij max         =      1.39731  Average Pij     =      0.37763
+Pij_til min     =     -2.90561  Pij_til max     =      2.74335  Average Pij_til =     -0.02070
+PI min          =      0.00790  PI max          =      0.99223  Average PI      =      0.38405
+Pi_beta_params values       1.14706      1.85448
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       291   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for      1306   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.30871   mean delta_p=  0.04211
+      Mean Acceptance Rate Pi   =  0.22793   mean delta_pi=  0.22758
+      Mean Acceptance Rate b_mu =  0.30200        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.06600        delta  =  0.40960
+
+iii) Running Time            :  0 d  0 h  0 min 32 sec
+     Estimated Remaining Time:  0 d  0 h  9 min  0 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    5
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.50284  Pij max         =      1.46416  Average Pij     =      0.37725
+Pij_til min     =     -2.49391  Pij_til max     =      2.66922  Average Pij_til =     -0.02049
+PI min          =      0.00548  PI max          =      0.99004  Average PI      =      0.38369
+Pi_beta_params values       1.21285      1.88165
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       197   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       695   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.31763   mean delta_p=  0.04180
+      Mean Acceptance Rate Pi   =  0.26813   mean delta_pi=  0.21517
+      Mean Acceptance Rate b_mu =  0.31400        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.08600        delta  =  0.32768
+
+iii) Running Time            :  0 d  0 h  0 min 40 sec
+     Estimated Remaining Time:  0 d  0 h  8 min 51 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    6
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.62544  Pij max         =      1.58156  Average Pij     =      0.37696
+Pij_til min     =     -2.88936  Pij_til max     =      2.83174  Average Pij_til =     -0.02351
+PI min          =      0.00337  PI max          =      0.99120  Average PI      =      0.38454
+Pi_beta_params values       1.15500      1.76551
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       246   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       426   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.31244   mean delta_p=  0.04130
+      Mean Acceptance Rate Pi   =  0.31981   mean delta_pi=  0.21314
+      Mean Acceptance Rate b_mu =  0.33200        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.09600        delta  =  0.26214
+
+iii) Running Time            :  0 d  0 h  0 min 49 sec
+     Estimated Remaining Time:  0 d  0 h  8 min 42 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    7
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.54351  Pij max         =      1.56837  Average Pij     =      0.37690
+Pij_til min     =     -3.48926  Pij_til max     =      2.72453  Average Pij_til =     -0.02022
+PI min          =      0.00493  PI max          =      0.99153  Average PI      =      0.38315
+Pi_beta_params values       1.07549      1.70054
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       203   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       378   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.31695   mean delta_p=  0.04099
+      Mean Acceptance Rate Pi   =  0.32872   mean delta_pi=  0.21390
+      Mean Acceptance Rate b_mu =  0.30000        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.13000        delta  =  0.20972
+
+iii) Running Time            :  0 d  0 h  0 min 57 sec
+     Estimated Remaining Time:  0 d  0 h  8 min 34 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    8
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.54589  Pij max         =      1.58893  Average Pij     =      0.37688
+Pij_til min     =     -2.97625  Pij_til max     =      2.52123  Average Pij_til =     -0.01460
+PI min          =      0.00633  PI max          =      0.99279  Average PI      =      0.38036
+Pi_beta_params values       1.13147      1.77634
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       210   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       403   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.31874   mean delta_p=  0.04071
+      Mean Acceptance Rate Pi   =  0.33981   mean delta_pi=  0.21818
+      Mean Acceptance Rate b_mu =  0.34800        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.17600        delta  =  0.16777
+
+iii) Running Time            :  0 d  0 h  1 min  5 sec
+     Estimated Remaining Time:  0 d  0 h  8 min 26 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:    9
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.67062  Pij max         =      1.53705  Average Pij     =      0.37670
+Pij_til min     =     -3.10795  Pij_til max     =      2.70552  Average Pij_til =     -0.01509
+PI min          =      0.00455  PI max          =      0.99679  Average PI      =      0.38078
+Pi_beta_params values       1.06556      1.69261
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       184   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       817   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.31926   mean delta_p=  0.04053
+      Mean Acceptance Rate Pi   =  0.36509   mean delta_pi=  0.23505
+      Mean Acceptance Rate b_mu =  0.34600        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.17400        delta  =  0.13422
+
+iii) Running Time            :  0 d  0 h  1 min 13 sec
+     Estimated Remaining Time:  0 d  0 h  8 min 17 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   10
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.59834  Pij max         =      1.55485  Average Pij     =      0.37697
+Pij_til min     =     -2.52021  Pij_til max     =      3.23279  Average Pij_til =     -0.01227
+PI min          =      0.00469  PI max          =      0.99230  Average PI      =      0.37991
+Pi_beta_params values       1.07959      1.68828
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       169   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       187   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32700   mean delta_p=  0.04054
+      Mean Acceptance Rate Pi   =  0.30597   mean delta_pi=  0.23341
+      Mean Acceptance Rate b_mu =  0.31000        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.22200        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  1 min 21 sec
+     Estimated Remaining Time:  0 d  0 h  8 min  9 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   11
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.52635  Pij max         =      1.50227  Average Pij     =      0.37674
+Pij_til min     =     -3.05715  Pij_til max     =      2.55246  Average Pij_til =     -0.01540
+PI min          =      0.00414  PI max          =      0.99499  Average PI      =      0.38037
+Pi_beta_params values       1.09724      1.73872
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       173   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       198   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32512   mean delta_p=  0.04051
+      Mean Acceptance Rate Pi   =  0.33204   mean delta_pi=  0.23555
+      Mean Acceptance Rate b_mu =  0.31200        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.27800        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  1 min 29 sec
+     Estimated Remaining Time:  0 d  0 h  8 min  1 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   12
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.53422  Pij max         =      1.58730  Average Pij     =      0.37707
+Pij_til min     =     -2.42514  Pij_til max     =      2.59872  Average Pij_til =     -0.01184
+PI min          =      0.00574  PI max          =      0.99664  Average PI      =      0.37932
+Pi_beta_params values       1.07998      1.72183
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       186   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       192   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32902   mean delta_p=  0.04070
+      Mean Acceptance Rate Pi   =  0.29731   mean delta_pi=  0.23231
+      Mean Acceptance Rate b_mu =  0.34600        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.26400        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  1 min 37 sec
+     Estimated Remaining Time:  0 d  0 h  7 min 52 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   13
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.69284  Pij max         =      1.59316  Average Pij     =      0.37694
+Pij_til min     =     -2.60551  Pij_til max     =      2.70295  Average Pij_til =     -0.01402
+PI min          =      0.00646  PI max          =      0.99132  Average PI      =      0.38110
+Pi_beta_params values       1.09098      1.75289
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       160   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       144   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32439   mean delta_p=  0.04061
+      Mean Acceptance Rate Pi   =  0.31504   mean delta_pi=  0.23186
+      Mean Acceptance Rate b_mu =  0.29600        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.26400        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  1 min 46 sec
+     Estimated Remaining Time:  0 d  0 h  7 min 44 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   14
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.48739  Pij max         =      1.42583  Average Pij     =      0.37701
+Pij_til min     =     -2.59459  Pij_til max     =      2.49223  Average Pij_til =     -0.01383
+PI min          =      0.00741  PI max          =      0.99557  Average PI      =      0.38036
+Pi_beta_params values       1.12805      1.78327
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       168   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       218   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32768   mean delta_p=  0.04066
+      Mean Acceptance Rate Pi   =  0.29495   mean delta_pi=  0.22797
+      Mean Acceptance Rate b_mu =  0.27600        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.25000        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  1 min 54 sec
+     Estimated Remaining Time:  0 d  0 h  7 min 36 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   15
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.55752  Pij max         =      1.46987  Average Pij     =      0.37692
+Pij_til min     =     -2.57649  Pij_til max     =      2.75654  Average Pij_til =     -0.01497
+PI min          =      0.00521  PI max          =      0.99322  Average PI      =      0.38085
+Pi_beta_params values       1.12476      1.75057
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       150   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       249   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32507   mean delta_p=  0.04062
+      Mean Acceptance Rate Pi   =  0.29420   mean delta_pi=  0.22322
+      Mean Acceptance Rate b_mu =  0.33200        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.27800        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  2 min  2 sec
+     Estimated Remaining Time:  0 d  0 h  7 min 28 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   16
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.58251  Pij max         =      1.52138  Average Pij     =      0.37706
+Pij_til min     =     -2.52936  Pij_til max     =      2.60708  Average Pij_til =     -0.01542
+PI min          =      0.00684  PI max          =      0.99418  Average PI      =      0.38140
+Pi_beta_params values       1.13344      1.71577
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       180   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       159   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32634   mean delta_p=  0.04057
+      Mean Acceptance Rate Pi   =  0.30330   mean delta_pi=  0.22061
+      Mean Acceptance Rate b_mu =  0.32800        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.32400        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  2 min 10 sec
+     Estimated Remaining Time:  0 d  0 h  7 min 20 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   17
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.63863  Pij max         =      1.39083  Average Pij     =      0.37718
+Pij_til min     =     -2.49267  Pij_til max     =      2.22099  Average Pij_til =     -0.01323
+PI min          =      0.00454  PI max          =      0.99544  Average PI      =      0.38009
+Pi_beta_params values       1.14668      1.78679
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       182   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       211   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32964   mean delta_p=  0.04065
+      Mean Acceptance Rate Pi   =  0.29846   mean delta_pi=  0.21680
+      Mean Acceptance Rate b_mu =  0.31200        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.28800        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  2 min 18 sec
+     Estimated Remaining Time:  0 d  0 h  7 min 12 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   18
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.73087  Pij max         =      1.48719  Average Pij     =      0.37698
+Pij_til min     =     -2.54483  Pij_til max     =      2.74004  Average Pij_til =     -0.02258
+PI min          =      0.00641  PI max          =      0.99134  Average PI      =      0.38445
+Pi_beta_params values       1.14261      1.79132
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       155   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       446   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32914   mean delta_p=  0.04072
+      Mean Acceptance Rate Pi   =  0.28414   mean delta_pi=  0.20774
+      Mean Acceptance Rate b_mu =  0.32000        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.26800        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  2 min 26 sec
+     Estimated Remaining Time:  0 d  0 h  7 min  3 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   19
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.56270  Pij max         =      1.49492  Average Pij     =      0.37663
+Pij_til min     =     -2.57232  Pij_til max     =      2.52070  Average Pij_til =     -0.01895
+PI min          =      0.00639  PI max          =      0.99298  Average PI      =      0.38225
+Pi_beta_params values       1.09792      1.77468
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       167   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       206   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32304   mean delta_p=  0.04059
+      Mean Acceptance Rate Pi   =  0.34468   mean delta_pi=  0.21089
+      Mean Acceptance Rate b_mu =  0.27800        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.28600        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  2 min 34 sec
+     Estimated Remaining Time:  0 d  0 h  6 min 55 sec
+
+!!!!!!!!!!!!!!!!!!!
+## PILOT RUN:   20
+!!!!!!!!!!!!!!!!!!!
+
+i)   Node Values:
+Pij min         =     -0.72571  Pij max         =      1.55998  Average Pij     =      0.37715
+Pij_til min     =     -2.53907  Pij_til max     =      3.09544  Average Pij_til =     -0.01506
+PI min          =      0.00701  PI max          =      0.99213  Average PI      =      0.38154
+Pi_beta_params values       1.12932      1.80183
+
+ii)  Acceptance Rates (before adjustment):
+  Acceptance Rate not achieved for       175   out of      2335   p_ij vectors
+  Acceptance Rate not achieved for       206   out of      2335   pi
+      Mean Acceptance Rate Pij  =  0.32539   mean delta_p=  0.04053
+      Mean Acceptance Rate Pi   =  0.34516   mean delta_pi=  0.21397
+      Mean Acceptance Rate b_mu =  0.30200        delta  =  0.05000
+      Mean Acceptance Rate b_phi=  0.29600        delta  =  0.10737
+
+iii) Running Time            :  0 d  0 h  2 min 42 sec
+     Estimated Remaining Time:  0 d  0 h  6 min 47 sec
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        BURN-IN
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+Node Values:
+Pij min         =     -1.22027  Pij max         =      2.11059  Average Pij     =      0.37498
+Pij_til min     =     -3.52854  Pij_til max     =      3.06893  Average Pij_til =      0.02318
+PI min          =      0.00400  PI max          =      0.99815  Average PI      =      0.36332
+Pi_beta_params values       1.08810      1.81903
+
+Running Time            :  0 d  0 h  4 min  4 sec
+Estimated Remaining Time:  0 d  0 h  5 min 25 sec
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        MCMC CHAIN
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+      Mean Final Acceptance Rate Pij  =  0.30210   mean delta_pij=  0.04053
+      Mean Final Acceptance Rate Pi   =  0.50443   mean delta_pi=  0.21397
+      Mean Final Acceptance Rate b_mu =  0.31665        delta  =  0.05000
+      Mean Final Acceptance Rate b_phi=  0.28405        delta  =  0.10737
+
+Analysis completed in  0 d  0 h  9 min 37 sec

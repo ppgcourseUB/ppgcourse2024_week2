@@ -1,6 +1,6 @@
   seed =  -1
 
-       seqfile = bears_bpp.txt
+       seqfile = ./sp_data/BPP/inputs/bears_bpp.txt
       Imapfile = bears_map.txt
        outfile = bears_out.txt
       mcmcfile = bears_mcmc.txt

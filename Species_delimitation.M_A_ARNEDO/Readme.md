@@ -21,13 +21,13 @@ The last version of BPP now also implements the multispecies-coalescing-with-int
 
 ## Data
 
-As in the other hands-on sessions, download the folder for this practice in the pppuser within the container and enter the directory. **All commands and scripts must be executed from that directory**:
+As in the other hands-on sessions, download the folder for this practice in the pppuser within the container and enter the directory.
  
 ```bash
 ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Species_delimitation.M_A_ARNEDO
-
 cd https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Species_delimitation.M_A_ARNEDO
 ```
+> **All commands and scripts must be executed from that directory**
 
 > [!Tip]
 > Remember that some users may need first to download the folder in the "/tmp" directory and then move it to the ppguser or even download the whole repository with `git clone ...` 

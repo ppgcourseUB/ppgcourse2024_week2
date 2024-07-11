@@ -22,7 +22,7 @@ You can find the executable binary of `BayPass` (g_baypass) in the folder `./sof
 ### 1. Retrieve the **input data** and the **scripts** for this session:  
  
 ```bash
-ghget https://github.com/ppgcourseUB/ppgcourse2024/tree/main/Adaptive_differentiation_and_covariates_association.SARA_GUIRAO-RICO
+ghget https://github.com/ppgcourseUB/ppgcourse2024_week2/tree/main/Adaptive_differentiation_and_covariates_association.SARA_GUIRAO-RICO
 ```
 > [!Tip]
 > Remember that Mac users may need first to download the folder in the "/tmp" directory and then move it to the ppguser 

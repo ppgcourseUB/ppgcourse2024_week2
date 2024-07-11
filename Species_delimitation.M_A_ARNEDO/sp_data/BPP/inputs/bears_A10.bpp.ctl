@@ -1,7 +1,7 @@
   seed =  -1
 
        seqfile = ./sp_data/BPP/inputs/bears_bpp.txt
-      Imapfile = bears_map.txt
+      Imapfile = ./sp_data/BPP/inputs/bears_map.txt
        outfile = bears_out.txt
       mcmcfile = bears_mcmc.txt
       *Threads = 8 1 1
